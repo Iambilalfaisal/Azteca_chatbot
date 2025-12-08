@@ -1,0 +1,11 @@
+[project]
+name = "tacos-ai-chatbot"
+version = "0.1.0"
+description = "Azure OpenAI Chatbot with Gradio"
+requires-python = ">=3.8"
+dependencies = [
+    "gradio>=4.0.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+]
+
