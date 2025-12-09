@@ -52,6 +52,10 @@
             box-shadow: 0 6px 20px var(--shadow-color);
         }
 
+        .chat-fab.hidden {
+            display: none;
+        }
+
         .chat-fab svg {
             width: 28px;
             height: 28px;
@@ -80,7 +84,7 @@
             opacity: 0;
             pointer-events: none;
             transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            z-index: 999;
+            z-index: 1001;
         }
 
         .chat-container.open {
@@ -429,8 +433,8 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                         </svg>
                     </div>
-                    <h3>Welcome to Tacos AI Support</h3>
-                    <p>How can we assist you today? Ask us anything about our services, locations, or products.</p>
+                    <h3>Welcome to Sunset Bistro Support</h3>
+                    <p>How can we assist you today? Ask us anything about our menu, locations, or services.</p>
                 </div>
             </div>
             <div class="chat-input-area">
@@ -447,8 +451,10 @@
         </div>
     `;
 
-    // Inject widget into page
-    document.body.insertAdjacentHTML('beforeend', widgetHTML);
+    // Inject widget into page (only if not already loaded)
+    if (!document.getElementById('chatContainer')) {
+        document.body.insertAdjacentHTML('beforeend', widgetHTML);
+    }
 
     // Get DOM elements
     const chatFab = document.getElementById('chatFab');
@@ -460,28 +466,51 @@
     const minimizeBtn = document.getElementById('minimizeBtn');
     const closeBtn = document.getElementById('closeBtn');
 
+    // Check if elements exist before adding event listeners
+    if (!chatFab || !chatContainer || !chatMessages || !chatInput || !sendBtn || !clearBtn || !minimizeBtn || !closeBtn) {
+        console.error('Chatbot widget elements not found');
+        return;
+    }
+
     // Functions
     function toggleChat() {
         isOpen = !isOpen;
         chatContainer.classList.toggle('open', isOpen);
+        chatFab.classList.toggle('hidden', isOpen);
         if (isOpen) {
             chatInput.focus();
             // Reset minimize state when opening
             isMinimized = false;
             chatMessages.style.display = 'flex';
-            document.querySelector('.chat-input-area').style.display = 'block';
+            const inputArea = document.querySelector('.chat-input-area');
+            if (inputArea) inputArea.style.display = 'block';
         }
     }
 
     function minimizeChat() {
         isMinimized = !isMinimized;
         const inputArea = document.querySelector('.chat-input-area');
+        if (!inputArea) return;
+        
         if (isMinimized) {
             chatMessages.style.display = 'none';
             inputArea.style.display = 'none';
+            // Update minimize button icon to expand icon
+            const minimizeIcon = minimizeBtn.querySelector('svg path');
+            if (minimizeIcon) {
+                minimizeIcon.setAttribute('d', 'M19 12H5v-2h14v2z');
+            }
+            minimizeBtn.setAttribute('title', 'Expand');
         } else {
             chatMessages.style.display = 'flex';
             inputArea.style.display = 'block';
+            // Update minimize button icon back to minimize icon
+            const minimizeIcon = minimizeBtn.querySelector('svg path');
+            if (minimizeIcon) {
+                minimizeIcon.setAttribute('d', 'M19 13H5v-2h14v2z');
+            }
+            minimizeBtn.setAttribute('title', 'Minimize');
+            scrollToBottom();
         }
     }
 
@@ -493,8 +522,8 @@
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                 </div>
-                <h3>Welcome to Tacos AI Support</h3>
-                <p>How can we assist you today? Ask us anything about our services, locations, or products.</p>
+                <h3>Welcome to Sunset Bistro Support</h3>
+                <p>How can we assist you today? Ask us anything about our menu, locations, or services.</p>
             </div>
         `;
         threadId = null;

@@ -21,7 +21,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Tacos AI Chatbot API", version="1.0.0")
+app = FastAPI(title="Sunset Bistro Chatbot API", version="1.0.0")
 
 # CORS middleware to allow React frontend to access the API
 app.add_middleware(
@@ -49,7 +49,7 @@ thread_storage = {}
 
 @app.get("/")
 async def root():
-    return {"message": "Tacos AI Chatbot API", "status": "running"}
+    return {"message": "Sunset Bistro Chatbot API", "status": "running"}
 
 @app.get("/api/health")
 async def health():
