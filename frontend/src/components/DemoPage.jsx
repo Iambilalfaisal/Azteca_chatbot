@@ -42,7 +42,7 @@ const DemoPage = () => {
                 textShadow: '0 2px 4px rgba(0,0,0,0.2)'
               }}
             >
-              Welcome to Tacos Azteca
+              Welcome to Sunset Bistro
             </Typography>
             <Typography 
               variant="h5" 
@@ -52,7 +52,7 @@ const DemoPage = () => {
                 maxWidth: '600px'
               }}
             >
-              Authentic Mexican Cuisine in Washington State
+              Fresh, Local, and Delicious Dining Experience
             </Typography>
             <Typography 
               variant="body1" 
@@ -63,9 +63,8 @@ const DemoPage = () => {
                 lineHeight: 1.8
               }}
             >
-              Experience the finest Mexican flavors at our locations across Washington. 
-              From traditional tacos to sizzling fajitas, we bring authentic Mexican cuisine 
-              to your neighborhood.
+              Experience exceptional dining with our chef-inspired menu featuring locally sourced ingredients. 
+              From gourmet entrees to artisanal desserts, we bring fine dining to your neighborhood.
             </Typography>
             <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
               <Button 
@@ -127,8 +126,8 @@ const DemoPage = () => {
                   Our Menu
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                  Discover our wide selection of authentic Mexican dishes, from classic tacos 
-                  to specialty entrees. Every dish is prepared with fresh ingredients and traditional recipes.
+                  Discover our chef-curated selection of seasonal dishes, from signature entrees 
+                  to artisanal desserts. Every dish is prepared with fresh, locally sourced ingredients.
                 </Typography>
               </CardContent>
             </Card>
@@ -158,7 +157,7 @@ const DemoPage = () => {
                   Multiple Locations
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                  Find us at multiple locations throughout Washington State. 
+                  Find us at multiple locations throughout the region. 
                   Visit us today for dine-in, takeout, or delivery.
                 </Typography>
               </CardContent>
@@ -190,7 +189,7 @@ const DemoPage = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8 }}>
                   Order online or call ahead for quick pickup. We make it easy to enjoy 
-                  authentic Mexican cuisine whenever you want.
+                  exceptional dining whenever you want.
                 </Typography>
               </CardContent>
             </Card>
@@ -217,12 +216,12 @@ const DemoPage = () => {
                   sx={{ width: 'fit-content' }}
                 />
                 <Typography variant="h4" sx={{ fontWeight: 700, color: 'primary.main' }}>
-                  Why Choose Tacos Azteca?
+                  Why Choose Sunset Bistro?
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                  We've been serving authentic Mexican cuisine in Washington State for over two decades. 
-                  Our commitment to quality, fresh ingredients, and traditional recipes has made us 
-                  a favorite among locals and visitors alike.
+                  We've been serving exceptional cuisine for over a decade. 
+                  Our commitment to quality, fresh ingredients, and innovative recipes has made us 
+                  a favorite among food enthusiasts and locals alike.
                 </Typography>
                 <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

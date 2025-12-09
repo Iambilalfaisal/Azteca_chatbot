@@ -1,4 +1,4 @@
-# Tacos AI - Enterprise Chat Widget
+# Azteca Foods - Enterprise Chat Widget
 
 Professional, enterprise-level chat widget for customer support.
 

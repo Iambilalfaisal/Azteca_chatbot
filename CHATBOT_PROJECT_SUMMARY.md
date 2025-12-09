@@ -1,8 +1,8 @@
-# Tacos Azteca AI Chatbot - Project Summary
+# Azteca Foods AI Chatbot - Project Summary
 
 ## Project Overview
 
-A professional, enterprise-level AI-powered customer support chatbot for Tacos Azteca restaurants. The chatbot provides instant customer assistance for inquiries about locations, menu items, services, and general information across all Washington State locations.
+A professional, enterprise-level AI-powered customer support chatbot for Azteca Foods restaurants. The chatbot provides instant customer assistance for inquiries about locations, menu items, services, and general information across all Washington State locations.
 
 ---
 
@@ -312,7 +312,7 @@ Edit these in `chatbot-widget.js` to match your brand colors.
 
 ## Project Summary
 
-This chatbot provides Tacos Azteca with a professional, 24/7 customer support solution that:
+This chatbot provides Azteca Foods with a professional, 24/7 customer support solution that:
 - Answers location and menu questions instantly
 - Provides a modern, user-friendly interface
 - Maintains conversation context

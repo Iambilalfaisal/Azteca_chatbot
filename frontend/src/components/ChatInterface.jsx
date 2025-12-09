@@ -105,7 +105,7 @@ const ChatInterface = () => {
         <Toolbar>
           <SmartToyIcon sx={{ mr: 2 }} />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Tacos AI - Customer Support
+            Sunset Bistro - Customer Support
           </Typography>
           <Chip
             label="Online"
@@ -161,7 +161,7 @@ const ChatInterface = () => {
               >
                 <SmartToyIcon sx={{ fontSize: 64, mb: 2, opacity: 0.5 }} />
                 <Typography variant="h6" gutterBottom>
-                  Welcome to Tacos AI Customer Support
+                  Welcome to Sunset Bistro Customer Support
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   How can we assist you today? Type your message below.
